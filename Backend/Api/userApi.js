@@ -4,6 +4,7 @@ module.exports = {
   checkUser: async function (data) {
     const password = data.password;
     const userEmail1 = await userDetail.findOne({ email: data.email });
+    
     if (userEmail1.password === password) {
       return "Success";
     } else {

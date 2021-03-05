@@ -1,4 +1,5 @@
 let mongoose=require('mongoose');
+let userDetail = require("../Schemas/mongoSchema");
 const { string } = require('prop-types');
 let userSchema = new mongoose.Schema({
 
@@ -12,7 +13,12 @@ let userSchema = new mongoose.Schema({
     likedby:Array,
     comment:{type:Number},
     commentby:Array,
-    commentdata:Array
+    commentdata:Array,
+    
+    userGet: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "empinfo"
+     },
 
 },{versionKey:false});
 

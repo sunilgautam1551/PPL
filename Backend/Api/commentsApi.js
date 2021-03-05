@@ -12,7 +12,6 @@ module.exports = {
         $push: { commentdata: textData, commentby: userInfo },
       }
     );
-
     return result;
   },
 };
